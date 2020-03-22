@@ -20,7 +20,7 @@ describe("the test helper", function(){
     });
 
     it("gives me 3 jquery instances of chrome, outer and inner", function(done){
-      this.timeout(5000);
+      this.timeout(10000);
 
       helper.newPad(function(){
         //check if the jquery selectors have the desired elements
@@ -136,7 +136,7 @@ describe("the test helper", function(){
       helper.selectLines($startLine, $endLine, startOffset, endOffset);
 
       var selection = inner$.document.getSelection();
-      expect(cleanText(selection.toString())).to.be("ort lines to t");
+      expect(cleanText(selection.toString().replace(/(\r\n|\n|\r)/gm,""))).to.be("ort lines to t");
 
       done();
     });
