@@ -99,9 +99,9 @@ sauceTestWorker.push({
 
 // MacOS???  This works??
 sauceTestWorker.push({
-    'platform'       : 'MacOS'
-  , 'browserName'    : 'Safari'
-  , 'version'        : ''
+    'platform'       : 'macOS 10.15'
+  , 'browserName'    : 'safari'
+  , 'version'        : 'latest'
 });
 
 sauceTestWorker.drain = function() {
