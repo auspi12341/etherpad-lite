@@ -67,14 +67,13 @@ var sauceTestWorker = async.queue(function (testSettings, callback) {
   });
 }, 5); //run 5 tests in parrallel
 
-// 4) Edge
+
+// 4) Ie on Win 8
 sauceTestWorker.push({
-    'platform'       : 'Windows 8'
-  , 'browserName'    : 'iexplore'
-  , 'version'        : '10.0'
+    'platform'       : 'Windows 10'
+  , 'browserName'    : 'edge'
+  , 'version'        : 'latest'
 });
-
-
 
 /*
 // 1) Firefox on Linux
@@ -98,26 +97,17 @@ sauceTestWorker.push({
 	"version": "13"
 });
 
-*/
-
-
-
-
-/*
-// 4) MacOS Safari
+// 4) Ie on Win 8
 sauceTestWorker.push({
-    'platform'       : 'macOS 10.15'
-  , 'browserName'    : 'safari'
-  , 'version'        : 'latest'
-});
-
-// 5) IE9 on Windows 7
-sauceTestWorker.push({
-    'platform'       : 'Windows 7'
-  , 'browserName'    : 'internet explorer'
-  , 'version'        : '9.0'
+    'platform'       : 'Windows 8'
+  , 'browserName'    : 'iexplore'
+  , 'version'        : '10.0'
 });
 */
+
+
+
+
 
 sauceTestWorker.drain = function() {
   setTimeout(function(){
