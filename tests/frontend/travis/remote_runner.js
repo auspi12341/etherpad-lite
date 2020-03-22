@@ -68,14 +68,6 @@ var sauceTestWorker = async.queue(function (testSettings, callback) {
 }, 5); //run 5 tests in parrallel
 
 
-// 5) Edge on Win 10
-sauceTestWorker.push({
-    'platform'       : 'Windows 10'
-  , 'browserName'    : 'microsoftedge'
-  , 'version'        : 'latest'
-});
-
-/*
 // 1) Firefox on Linux
 sauceTestWorker.push({
     'platform'       : 'Linux'
@@ -103,9 +95,13 @@ sauceTestWorker.push({
   , 'browserName'    : 'iexplore'
   , 'version'        : '10.0'
 });
-*/
 
-
+// 5) Edge on Win 10
+sauceTestWorker.push({
+    'platform'       : 'Windows 10'
+  , 'browserName'    : 'microsoftedge'
+  , 'version'        : 'latest'
+});
 
 
 
