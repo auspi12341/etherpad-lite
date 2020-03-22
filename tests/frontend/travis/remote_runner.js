@@ -85,7 +85,7 @@ sauceTestWorker.push({
 sauceTestWorker.push({
 	"browserName": "safari",
 	"platform": "OS X 10.15",
-	"version": "latest"
+	"version": "13"
 });
 
 /*
