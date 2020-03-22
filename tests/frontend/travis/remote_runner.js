@@ -69,10 +69,10 @@ var sauceTestWorker = async.queue(function (testSettings, callback) {
 
 
 // 4) Ie on Win 8
-// weird..  
+// weird...
 sauceTestWorker.push({
     'platform'       : 'Windows 10'
-  , 'browserName'    : 'edge'
+  , 'browserName'    : 'microsoftedge'
   , 'version'        : '80.0'
 });
 
