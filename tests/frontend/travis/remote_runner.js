@@ -70,7 +70,7 @@ var sauceTestWorker = async.queue(function (testSettings, callback) {
 // 4) Edge
 sauceTestWorker.push({
     'platform'       : 'Windows 10'
-  , 'browserName'    : 'edge'
+  , 'browserName'    : 'Edge'
   , 'version'        : '80.0'
 });
 
