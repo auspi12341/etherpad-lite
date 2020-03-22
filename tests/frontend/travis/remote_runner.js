@@ -67,24 +67,25 @@ var sauceTestWorker = async.queue(function (testSettings, callback) {
   });
 }, 5); //run 5 tests in parrallel
 
-// 1) Firefox
+// 1) Firefox on Linux
 sauceTestWorker.push({
     'platform'       : 'Linux'
   , 'browserName'    : 'firefox'
   , 'version'        : 'latest'
 });
 
-// 2) Chrome
+// 2) Chrome on Linux
 sauceTestWorker.push({
     'platform'       : 'Linux'
   , 'browserName'    : 'googlechrome'
   , 'version'        : 'latest'
 });
 
+// 3) Safari on OSX 10.11
 sauceTestWorker.push({
 	"browserName": "safari",
-	"platform": "OS X 10.11",
-	"version": "9"
+	"platform": "OS X 10.15",
+	"version": "13"
 });
 
 /*
