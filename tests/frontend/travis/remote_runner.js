@@ -73,7 +73,7 @@ var sauceTestWorker = async.queue(function (testSettings, callback) {
 sauceTestWorker.push({
     'platform'       : 'Windows 10'
   , 'browserName'    : 'microsoftedge'
-  , 'version'        : '80.0'
+  , 'version'        : 'latest'
 });
 
 /*
