@@ -110,7 +110,6 @@ sauceTestWorker.push({
   , 'browserName'    : 'safari'
   , 'version'        : 'latest'
 });
-*/
 
 // 5) IE9 on Windows 7
 sauceTestWorker.push({
