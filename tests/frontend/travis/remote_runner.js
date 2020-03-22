@@ -84,9 +84,9 @@ sauceTestWorker.push({
 
 // 3) Safari on OSX 10.11
 sauceTestWorker.push({
-	"browserName": "safari",
-	"platform": "OS X 10.15",
-	"version": "13"
+    'platform'       : 'OS X 10.15'
+  , 'browserName'    : 'safari'
+  , 'version'        : '13'
 });
 
 // 4) Ie on Win 8
