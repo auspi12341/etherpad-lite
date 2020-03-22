@@ -67,41 +67,39 @@ var sauceTestWorker = async.queue(function (testSettings, callback) {
   });
 }, 5); //run 5 tests in parrallel
 
-/*
-// Firefox
+// 1) Firefox
 sauceTestWorker.push({
     'platform'       : 'Linux'
   , 'browserName'    : 'firefox'
-  , 'version'        : ''
+  , 'version'        : 'latest'
 });
 
-// Chrome
+// 2) Chrome
 sauceTestWorker.push({
     'platform'       : 'Linux'
   , 'browserName'    : 'googlechrome'
-  , 'version'        : ''
+  , 'version'        : 'latest'
 });
 
-// IE 9
+// 3) Edge
 sauceTestWorker.push({
-    'platform'       : 'Windows XP'
-  , 'browserName'    : 'iexplore'
-  , 'version'        : '9'
+    'platform'       : 'Windows 10'
+  , 'browserName'    : 'MicrosoftEdge'
+  , 'version'        : 'latest'
 });
 
-// Edge
-sauceTestWorker.push({
-    'platform'       : 'Windows'
-  , 'browserName'    : 'edge'
-  , 'version'        : ''
-});
-*/
-
-// MacOS???  This works??
+// 4) MacOS Safari
 sauceTestWorker.push({
     'platform'       : 'macOS 10.15'
   , 'browserName'    : 'safari'
   , 'version'        : 'latest'
+});
+
+// 5) IE9 on Windows 7
+sauceTestWorker.push({
+    'platform'       : 'Windows 7'
+  , 'browserName'    : 'internet explorer'
+  , 'version'        : '9.0'
 });
 
 sauceTestWorker.drain = function() {
