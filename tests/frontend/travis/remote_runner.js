@@ -97,11 +97,18 @@ sauceTestWorker.push({
   , 'version'        : '9'
 });
 
-// IE 10
+// Edge
 sauceTestWorker.push({
-    'platform'       : 'Windows 2012'
-  , 'browserName'    : 'iexplore'
-  , 'version'        : '10'
+    'platform'       : 'Windows'
+  , 'browserName'    : 'edge'
+  , 'version'        : ''
+});
+
+// MacOS???  This works??
+sauceTestWorker.push({
+    'platform'       : 'MacOS'
+  , 'browserName'    : 'Safari'
+  , 'version'        : ''
 });
 
 sauceTestWorker.drain = function() {
