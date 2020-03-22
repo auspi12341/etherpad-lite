@@ -81,13 +81,20 @@ sauceTestWorker.push({
   , 'version'        : 'latest'
 });
 
+sauceTestWorker.push({
+	"browserName": "safari",
+	"platform": "OS X 10.11",
+	"version": "9"
+});
+
+/*
 // 4) MacOS Safari
 sauceTestWorker.push({
     'platform'       : 'macOS 10.15'
   , 'browserName'    : 'safari'
   , 'version'        : 'latest'
 });
-
+*/
 
 // 3) Edge
 /*
