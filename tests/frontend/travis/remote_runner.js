@@ -67,6 +67,7 @@ var sauceTestWorker = async.queue(function (testSettings, callback) {
   });
 }, 5); //run 5 tests in parrallel
 
+/*
 // Firefox
 sauceTestWorker.push({
     'platform'       : 'Linux'
@@ -94,6 +95,7 @@ sauceTestWorker.push({
   , 'browserName'    : 'edge'
   , 'version'        : ''
 });
+*/
 
 // MacOS???  This works??
 sauceTestWorker.push({
