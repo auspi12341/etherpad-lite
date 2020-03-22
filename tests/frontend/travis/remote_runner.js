@@ -81,18 +81,19 @@ sauceTestWorker.push({
   , 'version'        : 'latest'
 });
 
+// 4) MacOS Safari
+sauceTestWorker.push({
+    'platform'       : 'macOS 10.15'
+  , 'browserName'    : 'safari'
+  , 'version'        : 'latest'
+});
+
+
 // 3) Edge
 /*
 sauceTestWorker.push({
     'platform'       : 'Windows 10'
   , 'browserName'    : 'MicrosoftEdge'
-  , 'version'        : 'latest'
-});
-
-// 4) MacOS Safari
-sauceTestWorker.push({
-    'platform'       : 'macOS 10.15'
-  , 'browserName'    : 'safari'
   , 'version'        : 'latest'
 });
 
