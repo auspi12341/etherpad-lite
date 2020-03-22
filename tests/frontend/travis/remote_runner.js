@@ -82,6 +82,7 @@ sauceTestWorker.push({
 });
 
 // 3) Edge
+/*
 sauceTestWorker.push({
     'platform'       : 'Windows 10'
   , 'browserName'    : 'MicrosoftEdge'
@@ -89,13 +90,11 @@ sauceTestWorker.push({
 });
 
 // 4) MacOS Safari
-/*
 sauceTestWorker.push({
     'platform'       : 'macOS 10.15'
   , 'browserName'    : 'safari'
   , 'version'        : 'latest'
 });
-*/
 
 // 5) IE9 on Windows 7
 sauceTestWorker.push({
@@ -103,6 +102,7 @@ sauceTestWorker.push({
   , 'browserName'    : 'internet explorer'
   , 'version'        : '9.0'
 });
+*/
 
 sauceTestWorker.drain = function() {
   setTimeout(function(){
