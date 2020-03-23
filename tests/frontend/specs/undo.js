@@ -4,11 +4,10 @@ describe("undo button", function(){
     this.timeout(60000);
   });
 
-/*
   it("undo some typing by clicking undo button", function(done){
     var inner$ = helper.padInner$;
     var chrome$ = helper.padChrome$;
-    
+
     // get the first text element inside the editable space
     var $firstTextElement = inner$("div span").first();
     var originalValue = $firstTextElement.text(); // get the original value
@@ -30,7 +29,6 @@ describe("undo button", function(){
       done();
     });
   });
-*/
 
   it("undo some typing using a keypress", function(done){
     var inner$ = helper.padInner$;
@@ -44,18 +42,7 @@ describe("undo button", function(){
     var modifiedValue = $firstTextElement.text(); // get the modified value
     expect(modifiedValue).not.to.be(originalValue); // expect the value to change
 
-    if(inner$(window)[0].bowser.modernIE){ // if it's IE
-      var evtType = "keypress";
-    }else{
-      // Edge also requires keypress.
-      if(window.navigator.userAgent.indexOf("Edge") > -1){
-        var evtType = "keypress";
-      }else{
-        var evtType = "keydown";
-      }
-    }
-
-    var e = inner$.Event(evtType);
+    var e = inner$.Event(helper.evtType);
     e.ctrlKey = true; // Control key
     e.which = 90; // z
     inner$("#innerdocbody").trigger(e);
