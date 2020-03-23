@@ -79,7 +79,7 @@ describe('scroll when focus line is out of viewport', function () {
           // warning: even pressing up arrow, the caret does not change of position
           pressAndReleaseUpArrow();
           done();
-        }, 1000);
+        }, 2000);
       });
 
       it('keeps the focus line scrolled 30% of the top of the viewport', function (done) {
@@ -130,6 +130,7 @@ describe('scroll when focus line is out of viewport', function () {
       });
 
       it('scrolls 30% of viewport up', function (done) {
+        if(window.navigator.userAgent.indexOf("Edge") > -1) done(); // Skip the test if we're in Edge
         var lastLineOfViewportAfterEnter = getLastLineVisibleOfViewport();
         // default behavior is to scroll one line at the bottom of viewport, but as
         // scrollPercentageWhenFocusLineIsOutOfViewport is set to 0.3, we have an extra 30% of lines scrolled
